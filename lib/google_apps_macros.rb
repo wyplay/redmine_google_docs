@@ -3,13 +3,14 @@ require 'digest/md5'
 require 'yaml'
 include ActionView::Helpers::JavaScriptHelper
 
-class GoogleSpreadsheetMacros
+module GoogleAppsMacros
+  unloadable
+class SpreadsheetMacros
   def self.googless_macro(googless_wiki_content, args, nohead=false)
     raise  "The correct usage is {{ googless(key,query) }}" unless args.length >= 1
 
     # redmine seemingly html-escapes all the wiki arguments, so we un-escape them
     key = escape_javascript(CGI.unescape(args[0]))
-
 
     sheet = "0"
     if args.length > 1
@@ -164,7 +165,7 @@ EOF
   end
 end
 
-class GoogleDocumentMacros
+class DocumentMacros
   def self.get_doc(obj, args)
     doc_key = args[0]
     if args.length == 2
@@ -183,4 +184,5 @@ class GoogleDocumentMacros
       raise "The Google document key must be alphanumeric."
     end
   end
+end
 end
