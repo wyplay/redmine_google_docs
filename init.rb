@@ -1,6 +1,6 @@
 require 'redmine'
 
-require File.dirname(__FILE__) + '/lib/google_docs_macros.rb'
+require File.dirname(__FILE__) + '/lib/google_spreadsheet_macros.rb'
 
 Redmine::Plugin.register :redmine_googlesss do
   name "Google Docs Plugin"
