@@ -226,7 +226,7 @@ EOF
 		end
 		if /^[\w-]+$/.match(doc_key)
 			if domain
-				url = "https://docs.google.com/a/{domain}/drawings/"
+				url = "https://docs.google.com/a/#{domain}/drawings/"
 			else
 				url = "https://docs.google.com/drawings/"
 			end
