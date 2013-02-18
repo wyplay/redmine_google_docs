@@ -123,6 +123,7 @@ class SpreadsheetMacros
 Loading Google Spreadsheet...
 </div>
 EOF
+out=out.html_safe
   end
 
   # a function for {{googleissue()}}
@@ -196,7 +197,7 @@ class DocumentMacros
       else
         url += "pub?id=#{doc_key}"
       end
-      out = "<iframe src='#{url}' width='800' height='400'></iframe>"
+      out = "<iframe src='#{url}' width='800' height='400'></iframe>".html_safe
     else
       raise "The Google document key must be alphanumeric."
     end

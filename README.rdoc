@@ -8,7 +8,9 @@ For more information, see our blog post on this module: http://evolvingweb.ca/st
 
 == Installation
 
-1. Extract/clone to the vendor/plugins folder of your Redmine installation.
+1. Extract/clone to the plugins folder of your Redmine installation.
 2. Enjoy
+3. Adds support for Redmine 2.2.1 and Rails 3 
 
-The development of this module was sponsored by Evolving Web.
+
+This is a clone of https://github.com/evolvingweb/redmine_google_docs
