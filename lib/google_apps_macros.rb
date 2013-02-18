@@ -233,7 +233,7 @@ EOF
 			if action
 				url += "d/#{doc_key}/#{action}"
 			else
-				url += "d/#{doc_key}"
+				url += "d/#{doc_key}/pub?w=900&h=720"
 			end
 			out = "<iframe height=\"800\" src=\"#{url}\" width=\"900\"></iframe>".html_safe
 		else
